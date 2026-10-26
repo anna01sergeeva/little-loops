@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Όλη η συλλογή | Little Loops</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="doll.css">
+</head>
+
+<body class="collection-page">
+
+ <!-- HEADER -->
+    <header class="header">
+
+        <a href="#" class="logo">
+            <span class="logo-icon">🧶</span>
+            <span>
+                Little Loops
+                <small>handmade crochet</small>
+            </span>
+        </a>
+
+        <nav class="nav">
+            <a href="doll.html">Αρχική</a>
+            <a href="#shop">Παιχνιδάκια</a>
+            <a href="#about">Η ιστορία μας</a>
+            <a href="#contact">Επικοινωνία</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒
+            <span id="cartCount">0</span>
+        </button>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    </header>
+
+    <!-- SHOP -->
+    <section class="shop" id="shop">
+
+        <div class="section-heading">
+
+            <span>✿ όλη η συλλογή ✿</span>
+
+            <h2>Όλοι οι μικροί μας φίλοι <span class="collection-yarn">🧶</span></h2>
+
+            <p>
+                17 χειροποίητα φιλαράκια. Διάλεξε κατηγορία ή δες τα όλα μαζί.
+            </p>
+
+        </div>
+
+        <div class="collection-filters" role="radiogroup" aria-label="Κατηγορίες">
+            <label class="filter-chip">
+                <input type="radio" name="filter" id="f-all" checked>
+                Όλα <span>17</span>
+            </label>
+            <label class="filter-chip">
+                <input type="radio" name="filter" id="f-dolls">
+                Κουκλίτσες <span>4</span>
+            </label>
+            <label class="filter-chip">
+                <input type="radio" name="filter" id="f-rattles">
+                Κουδουνίστρες <span>8</span>
+            </label>
+            <label class="filter-chip">
+                <input type="radio" name="filter" id="f-toys">
+                Παιχνιδάκια <span>2</span>
+            </label>
+            <label class="filter-chip">
+                <input type="radio" name="filter" id="f-christmas">
+                Χριστούγεννα <span>5</span>
+            </label>
+        </div>
+
+<div class="collection-grid">
+
+    <article class="all-card cat-rattles" data-cat="rattles" style="--i:0">
+
+        <div class="all-card-photo" data-emoji="🦒">
+            <img src="rattles_giraffe.jpg" alt="Little giraffe" loading="lazy" onerror="this.style.display='none'">
+            <a href="rettles.html" class="all-card-cat">Κουδουνίστρες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little giraffe</h3>
+            <p>Γλυκοί ήχοι από ψηλά για τις πιο χαρούμενες ανακαλύψεις.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little giraffe', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-dolls" data-cat="dolls" style="--i:1">
+
+        <div class="all-card-photo" data-emoji="🪆">
+            <img src="dolls2.jpg" alt="Little dolls" loading="lazy" onerror="this.style.display='none'">
+            <a href="littledoll.html" class="all-card-cat">Κουκλίτσες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little dolls</h3>
+            <p>Τρεις αχώριστες φιλενάδες με σγουρά μαλλάκια και φιογκάκια.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little dolls', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-rattles" data-cat="rattles" style="--i:2">
+
+        <div class="all-card-photo" data-emoji="🐻">
+            <img src="rettles_bear.jpg" alt="Little bear" loading="lazy" onerror="this.style.display='none'">
+            <a href="rettles.html" class="all-card-cat">Κουδουνίστρες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little bear</h3>
+            <p>Ο πιο τρυφερός ήχος για την πρώτη του παρέα.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little bear', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-christmas" data-cat="christmas" style="--i:3">
+
+        <div class="all-card-photo" data-emoji="🧸">
+            <img src="toy_christmas_bear.jpg" alt="Little winter bear" loading="lazy" onerror="this.style.display='none'">
+            <a href="christmas.html" class="all-card-cat">Χριστούγεννα ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little winter bear</h3>
+            <p>Ζεστό αρκουδάκι με σκουφάκι που βγαίνει και πλεκτό κασκόλ.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little winter bear', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-toys" data-cat="toys" style="--i:4">
+
+        <div class="all-card-photo" data-emoji="🐰">
+            <img src="toy_hare.jpg" alt="Little hare" loading="lazy" onerror="this.style.display='none'">
+            <a href="toy.html" class="all-card-cat">Παιχνιδάκια ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little hare</h3>
+            <p>Γλυκοί ήχοι από ψηλά για τις πιο χαρούμενες ανακαλύψεις.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little hare', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-rattles" data-cat="rattles" style="--i:5">
+
+        <div class="all-card-photo" data-emoji="🐶">
+            <img src="rettles_dog.jpg" alt="Little dog" loading="lazy" onerror="this.style.display='none'">
+            <a href="rettles.html" class="all-card-cat">Κουδουνίστρες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little dog</h3>
+            <p>Ο πιο πιστός φίλος στις πρώτες του περιπέτειες.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little dog', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-rattles" data-cat="rattles christmas" style="--i:0">
+
+        <div class="all-card-photo" data-emoji="🦌">
+            <img src="rettles_reindeer.jpg" alt="Little reindeer rattle" loading="lazy" onerror="this.style.display='none'">
+            <a href="rettles.html" class="all-card-cat">Κουδουνίστρες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little reindeer rattle</h3>
+            <p>Ένας μικρός γιορτινός φίλος που σκορπίζει χαμόγελα.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little reindeer rattle', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-dolls" data-cat="dolls" style="--i:1">
+
+        <div class="all-card-photo" data-emoji="👑">
+            <img src="doll_princess.jpg" alt="Little doll princess" loading="lazy" onerror="this.style.display='none'">
+            <a href="littledoll.html" class="all-card-cat">Κουκλίτσες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little doll princess</h3>
+            <p>Πριγκίπισσα με μπουκλάκια, τούλινο φόρεμα και τιάρα από περλίτσες.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little doll princess', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-toys" data-cat="toys" style="--i:2">
+
+        <div class="all-card-photo" data-emoji="🐥">
+            <img src="toy_duckling.jpg" alt="Little duckling" loading="lazy" onerror="this.style.display='none'">
+            <a href="toy.html" class="all-card-cat">Παιχνιδάκια ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little duckling</h3>
+            <p>Ο πιο τρυφερός ήχος για την πρώτη του παρέα.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little duckling', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-christmas" data-cat="christmas" style="--i:3">
+
+        <div class="all-card-photo" data-emoji="🐻‍❄️">
+            <img src="toy_christmas_polar_bear.jpg" alt="Little polar bear" loading="lazy" onerror="this.style.display='none'">
+            <a href="christmas.html" class="all-card-cat">Χριστούγεννα ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little polar bear</h3>
+            <p>Μικρό πολικό αρκουδάκι με φουντωτό σκουφάκι.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little polar bear', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-rattles" data-cat="rattles" style="--i:4">
+
+        <div class="all-card-photo" data-emoji="🐘">
+            <img src="rettles_elephant.jpg" alt="Little elephant" loading="lazy" onerror="this.style.display='none'">
+            <a href="rettles.html" class="all-card-cat">Κουδουνίστρες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little elephant</h3>
+            <p>Μικρό μέγεθος, τεράστια αγκαλιά!</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little elephant', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-dolls" data-cat="dolls christmas" style="--i:5">
+
+        <div class="all-card-photo" data-emoji="🌹">
+            <img src="doll_red_dress.jpg" alt="Little doll red dress" loading="lazy" onerror="this.style.display='none'">
+            <a href="littledoll.html" class="all-card-cat">Κουκλίτσες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little doll red dress</h3>
+            <p>Κόκκινο φόρεμα, λευκό γιακαδάκι και πλεκτά τριαντάφυλλα.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little doll red dress', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-rattles" data-cat="rattles" style="--i:0">
+
+        <div class="all-card-photo" data-emoji="🦉">
+            <img src="rettles_owl.jpg" alt="Little owl" loading="lazy" onerror="this.style.display='none'">
+            <a href="rettles.html" class="all-card-cat">Κουδουνίστρες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little owl</h3>
+            <p>Ένας σοφός φίλος για ήσυχες, ονειρεμένες νύχτες.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little owl', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-christmas" data-cat="christmas" style="--i:1">
+
+        <div class="all-card-photo" data-emoji="🦌">
+            <img src="toy_christmas_reindeer.jpg" alt="Little reindeer" loading="lazy" onerror="this.style.display='none'">
+            <a href="christmas.html" class="all-card-cat">Χριστούγεννα ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little reindeer</h3>
+            <p>Χαρούμενος τάρανδος με κόκκινη μυτούλα και κασκόλ.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little reindeer', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-rattles" data-cat="rattles" style="--i:2">
+
+        <div class="all-card-photo" data-emoji="🐰">
+            <img src="rettles_hare.jpg" alt="Little hare rattle" loading="lazy" onerror="this.style.display='none'">
+            <a href="rettles.html" class="all-card-cat">Κουδουνίστρες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little hare rattle</h3>
+            <p>Ήρεμοι, απαλοί ήχοι σαν μικρή νιφάδα αγάπης.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little hare rattle', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-dolls" data-cat="dolls" style="--i:3">
+
+        <div class="all-card-photo" data-emoji="🎀">
+            <img src="doll.jpg" alt="Little doll with buns" loading="lazy" onerror="this.style.display='none'">
+            <a href="littledoll.html" class="all-card-cat">Κουκλίτσες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little doll with buns</h3>
+            <p>Η πιο cool κουκλίτσα, με κοτσάκια και μεγάλο φιόγκο.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little doll with buns', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="all-card cat-rattles" data-cat="rattles" style="--i:4">
+
+        <div class="all-card-photo" data-emoji="🐰">
+            <img src="rettles_pink_hare.jpg" alt="Little pink hare" loading="lazy" onerror="this.style.display='none'">
+            <a href="rettles.html" class="all-card-cat">Κουδουνίστρες ›</a>
+            <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+        </div>
+
+        <div class="all-card-info">
+            <h3>Little pink hare</h3>
+            <p>Για τις πιο παραμυθένιες στιγμές παιχνιδιού.</p>
+            <div class="all-card-bottom">
+                <strong>25€</strong>
+                <button class="all-card-add" onclick="addToCart('Little pink hare', 25)">
+                    + Προσθήκη
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+</div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+
+            <div class="about-circle">
+                🧶
+            </div>
+
+            <span class="about-doodle one">✿</span>
+            <span class="about-doodle two">♡</span>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="section-label">
+                ✿ a little story
+            </span>
+
+            <h2>
+                Φτιαγμένα αργά,
+                <span>με αγάπη.</span>
+            </h2>
+
+            <p>
+                Κάθε Little Loops παιχνιδάκι ξεκινάει με ένα κουβάρι
+                νήμα, ένα βελονάκι και μια μικρή ιδέα.
+            </p>
+
+            <p>
+                Δεν φτιάχνουμε απλώς παιχνίδια.
+                Φτιάχνουμε μικρούς φίλους που μπορούν να κρατήσουν
+                μια ξεχωριστή θέση στην καρδιά σου.
+            </p>
+
+            <div class="signature">
+                with love ♡
+                <br>
+                <strong>Little Loops</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CUSTOM -->
+    <section class="custom">
+
+        <div>
+
+            <span>♡ something special?</span>
+
+            <h2>
+                Θες ένα παιχνιδάκι
+                <br>
+                φτιαγμένο μόνο για σένα;
+            </h2>
+
+            <p>
+                Μπορούμε να δημιουργήσουμε ένα custom
+                πλεκτό φιλαράκι στα χρώματα και στο στυλ που αγαπάς.
+            </p>
+
+            <a href="#contact" class="primary-button">
+                Μίλησέ μας ♡
+            </a>
+
+        </div>
+
+        <div class="custom-decoration">
+            🧸
+        </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+
+        <div class="newsletter-icon">
+            ✉
+        </div>
+
+        <h2>Μείνε στην παρέα μας ♡</h2>
+
+        <p>
+            Νέα παιχνιδάκια, μικρές συλλογές και πολλή χαριτωμενιά.
+        </p>
+
+        <form onsubmit="subscribe(event)">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Το email σου..."
+                required
+            >
+
+            <button type="submit">
+                Εγγραφή
+            </button>
+
+        </form>
+
+        <small id="subscribeMessage"></small>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <div class="footer-logo">
+            🧶 <strong>Little Loops</strong>
+            <span>handmade crochet</span>
+        </div>
+
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Email</a>
+        </div>
+
+        <p>
+            © 2026 Little Loops · Made slowly. Made with love. ♡
+        </p>
+
+    </footer>
+
+
+    <!-- CART -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart(event)">
+
+        <div class="cart" onclick="event.stopPropagation()">
+
+            <button class="close-cart" onclick="closeCart()">
+                ×
+            </button>
+
+            <h2>
+                Το καλαθάκι σου 🧺
+            </h2>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-total">
+
+                <span>Σύνολο</span>
+
+                <strong id="cartTotal">
+                    0€
+                </strong>
+
+            </div>
+
+            <button class="checkout-button" onclick="checkout()">
+                Ολοκλήρωση παραγγελίας
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        Προστέθηκε στο καλαθάκι ♡
+    </div>
+
+
+    <script src="doll.js"></script>
+
+</body>
+</html>

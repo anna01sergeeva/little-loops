@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Little Loops | Handmade Crochet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="doll.css">
+</head>
+
+<body class="toy-page">
+
+ <!-- HEADER -->
+    <header class="header">
+
+        <a href="#" class="logo">
+            <span class="logo-icon">🧶</span>
+            <span>
+                Little Loops
+                <small>handmade crochet</small>
+            </span>
+        </a>
+
+        <nav class="nav">
+            <a href="doll.html">Αρχική</a>
+            <a href="#shop">Παιχνιδάκια</a>
+            <a href="#about">Η ιστορία μας</a>
+            <a href="#contact">Επικοινωνία</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒
+            <span id="cartCount">0</span>
+        </button>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    </header>
+
+    <!-- SHOP -->
+    <section class="shop" id="shop">
+
+        <div class="toy-clouds" aria-hidden="true">
+            <span class="cloud" style="--y:8%; --w:160px; --d:70s; --delay:-10s"></span>
+            <span class="cloud" style="--y:26%; --w:110px; --d:55s; --delay:-40s"></span>
+            <span class="cloud" style="--y:44%; --w:200px; --d:85s; --delay:-25s"></span>
+            <span class="cloud" style="--y:62%; --w:130px; --d:60s; --delay:-5s"></span>
+            <span class="cloud" style="--y:80%; --w:170px; --d:75s; --delay:-55s"></span>
+            <span class="cloud" style="--y:92%; --w:120px; --d:65s; --delay:-30s"></span>
+        </div>
+
+        <div class="toy-mobile" aria-hidden="true">
+            <span class="hang" style="--len:70px; --c:#cfe0ee; --d:3.4s; --delay:0s">☁</span>
+            <span class="hang" style="--len:110px; --c:#f2cf6b; --d:2.8s; --delay:-0.8s">★</span>
+            <span class="hang" style="--len:55px; --c:#eeb0bd; --d:3.1s; --delay:-1.6s">♡</span>
+            <span class="hang" style="--len:130px; --c:#e9c46a; --d:3.6s; --delay:-0.4s">☾</span>
+            <span class="hang" style="--len:55px; --c:#eeb0bd; --d:3.0s; --delay:-2.2s">♡</span>
+            <span class="hang" style="--len:110px; --c:#f2cf6b; --d:2.7s; --delay:-1.2s">★</span>
+            <span class="hang" style="--len:70px; --c:#cfe0ee; --d:3.3s; --delay:-2.6s">☁</span>
+        </div>
+
+        <div class="section-heading">
+
+            <span>✿ little friends ✿</span>
+
+            <h2>Μικροί φίλοι για μικρά χεράκια</h2>
+
+            <p>
+                Δύο τρυφερά φιλαράκια με γλυκούς ήχους για τις πρώτες ανακαλύψεις.
+            </p>
+
+        </div>
+
+
+<div class="toy-duo">
+
+    <!-- LITTLE HARE -->
+    <article class="toy-card hare">
+
+        <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+
+        <div class="toy-frame" data-emoji="🐰">
+
+            <div class="slides slides-2">
+                <img class="slide" style="--i:0" src="toy_hare.jpg" alt="Little hare" onerror="this.style.display='none'">
+                <img class="slide" style="--i:1" src="toy_hare2.jpg" alt="Little hare" onerror="this.style.display='none'">
+            </div>
+
+            <div class="slide-dots">
+                <span style="--i:0"></span>
+                <span style="--i:1"></span>
+            </div>
+
+        </div>
+
+        <span class="badge">♡ αγαπημένο</span>
+
+        <div class="toy-info">
+
+            <span class="toy-category">AMIGURUMI</span>
+
+            <h3>Little hare</h3>
+
+            <p>Γλυκοί ήχοι από ψηλά για τις πιο χαρούμενες ανακαλύψεις.</p>
+
+            <ul class="toy-tags">
+                <li>🧶 100% χειροποίητο</li>
+                <li>🎵 Γλυκός ήχος</li>
+                <li>👶 Για μωράκια</li>
+            </ul>
+
+            <div class="toy-bottom">
+                <strong>25€</strong>
+                <button class="primary-button" onclick="addToCart('Little hare', 25)">
+                    + Προσθήκη στο καλάθι
+                </button>
+            </div>
+
+        </div>
+
+    </article>
+
+    <!-- LITTLE DUCKLING -->
+    <article class="toy-card duck">
+
+        <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+
+        <div class="toy-frame" data-emoji="🐥">
+            <img src="toy_duckling.jpg" alt="Little duckling" onerror="this.style.display='none'">
+        </div>
+
+        <span class="badge">♡ αγαπημένο</span>
+
+        <div class="toy-info">
+
+            <span class="toy-category">AMIGURUMI</span>
+
+            <h3>Little duckling</h3>
+
+            <p>Ο πιο τρυφερός ήχος για την πρώτη του παρέα.</p>
+
+            <ul class="toy-tags">
+                <li>🧶 100% χειροποίητο</li>
+                <li>🎵 Τρυφερός ήχος</li>
+                <li>👶 Πρώτη παρέα</li>
+            </ul>
+
+            <div class="toy-bottom">
+                <strong>25€</strong>
+                <button class="primary-button" onclick="addToCart('Little duckling', 25)">
+                    + Προσθήκη στο καλάθι
+                </button>
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+
+            <div class="about-circle">
+                🧶
+            </div>
+
+            <span class="about-doodle one">✿</span>
+            <span class="about-doodle two">♡</span>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="section-label">
+                ✿ a little story
+            </span>
+
+            <h2>
+                Φτιαγμένα αργά,
+                <span>με αγάπη.</span>
+            </h2>
+
+            <p>
+                Κάθε Little Loops παιχνιδάκι ξεκινάει με ένα κουβάρι
+                νήμα, ένα βελονάκι και μια μικρή ιδέα.
+            </p>
+
+            <p>
+                Δεν φτιάχνουμε απλώς παιχνίδια.
+                Φτιάχνουμε μικρούς φίλους που μπορούν να κρατήσουν
+                μια ξεχωριστή θέση στην καρδιά σου.
+            </p>
+
+            <div class="signature">
+                with love ♡
+                <br>
+                <strong>Little Loops</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CUSTOM -->
+    <section class="custom">
+
+        <div>
+
+            <span>♡ something special?</span>
+
+            <h2>
+                Θες ένα παιχνιδάκι
+                <br>
+                φτιαγμένο μόνο για σένα;
+            </h2>
+
+            <p>
+                Μπορούμε να δημιουργήσουμε ένα custom
+                πλεκτό φιλαράκι στα χρώματα και στο στυλ που αγαπάς.
+            </p>
+
+            <a href="#contact" class="primary-button">
+                Μίλησέ μας ♡
+            </a>
+
+        </div>
+
+        <div class="custom-decoration">
+            🧸
+        </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+
+        <div class="newsletter-icon">
+            ✉
+        </div>
+
+        <h2>Μείνε στην παρέα μας ♡</h2>
+
+        <p>
+            Νέα παιχνιδάκια, μικρές συλλογές και πολλή χαριτωμενιά.
+        </p>
+
+        <form onsubmit="subscribe(event)">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Το email σου..."
+                required
+            >
+
+            <button type="submit">
+                Εγγραφή
+            </button>
+
+        </form>
+
+        <small id="subscribeMessage"></small>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <div class="footer-logo">
+            🧶 <strong>Little Loops</strong>
+            <span>handmade crochet</span>
+        </div>
+
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Email</a>
+        </div>
+
+        <p>
+            © 2026 Little Loops · Made slowly. Made with love. ♡
+        </p>
+
+    </footer>
+
+
+    <!-- CART -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart(event)">
+
+        <div class="cart" onclick="event.stopPropagation()">
+
+            <button class="close-cart" onclick="closeCart()">
+                ×
+            </button>
+
+            <h2>
+                Το καλαθάκι σου 🧺
+            </h2>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-total">
+
+                <span>Σύνολο</span>
+
+                <strong id="cartTotal">
+                    0€
+                </strong>
+
+            </div>
+
+            <button class="checkout-button" onclick="checkout()">
+                Ολοκλήρωση παραγγελίας
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        Προστέθηκε στο καλαθάκι ♡
+    </div>
+
+
+    <script src="doll.js"></script>
+
+</body>
+</html>

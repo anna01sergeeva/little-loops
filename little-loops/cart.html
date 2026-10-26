@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Το καλαθάκι σου | Little Loops</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="doll.css">
+</head>
+
+<body class="cart-page">
+
+ <!-- HEADER -->
+    <header class="header">
+
+        <a href="doll.html" class="logo">
+            <span class="logo-icon">🧶</span>
+            <span>
+                Little Loops
+                <small>handmade crochet</small>
+            </span>
+        </a>
+
+        <nav class="nav">
+            <a href="doll.html">Αρχική</a>
+            <a href="collection.html">Παιχνιδάκια</a>
+            <a href="doll.html#about">Η ιστορία μας</a>
+            <a href="#contact">Επικοινωνία</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒
+            <span id="cartCount">0</span>
+        </button>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    </header>
+
+    <!-- ΚΑΛΑΘΙ -->
+    <section class="cart-section" id="cart">
+
+        <div class="section-heading">
+
+            <span>✿ το καλαθάκι σου ✿</span>
+
+            <h2>Το καλαθάκι σου <span class="cart-basket">🧺</span></h2>
+
+            <p>
+                Έλεγξε τα φιλαράκια σου πριν ολοκληρώσεις την παραγγελία.
+            </p>
+
+        </div>
+
+        <!-- εδώ εμφανίζονται τα προϊόντα (από το doll.js) -->
+        <div id="cartPage"></div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <div class="footer-logo">
+            🧶 <strong>Little Loops</strong>
+            <span>handmade crochet</span>
+        </div>
+
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Email</a>
+        </div>
+
+        <p>
+            © 2026 Little Loops · Made slowly. Made with love. ♡
+        </p>
+
+    </footer>
+
+
+    <!-- CART -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart(event)">
+
+        <div class="cart" onclick="event.stopPropagation()">
+
+            <button class="close-cart" onclick="closeCart()">
+                ×
+            </button>
+
+            <h2>
+                Το καλαθάκι σου 🧺
+            </h2>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-total">
+
+                <span>Σύνολο</span>
+
+                <strong id="cartTotal">
+                    0€
+                </strong>
+
+            </div>
+
+            <button class="checkout-button" onclick="checkout()">
+                Ολοκλήρωση παραγγελίας
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        Προστέθηκε στο καλαθάκι ♡
+    </div>
+
+
+    <script src="doll.js"></script>
+
+</body>
+</html>

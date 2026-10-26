@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Little Loops | Handmade Crochet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="doll.css">
+</head>
+
+<body class="rattle-page">
+
+ <!-- HEADER -->
+    <header class="header">
+
+        <a href="#" class="logo">
+            <span class="logo-icon">🧶</span>
+            <span>
+                Little Loops
+                <small>handmade crochet</small>
+            </span>
+        </a>
+
+        <nav class="nav">
+            <a href="doll.html">Αρχική</a>
+            <a href="#shop">Παιχνιδάκια</a>
+            <a href="#about">Η ιστορία μας</a>
+            <a href="#contact">Επικοινωνία</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒
+            <span id="cartCount">0</span>
+        </button>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    </header>
+
+    <!-- SHOP -->
+    <section class="shop" id="shop">
+
+        <div class="rattle-bubbles" aria-hidden="true">
+            <span style="--x:8%; --s:22px; --d:19s; --delay:-19s; --c:#cfe0f2"></span>
+            <span style="--x:90%; --s:14px; --d:21s; --delay:-8s; --c:#ddd0f0"></span>
+            <span style="--x:7%; --s:48px; --d:22s; --delay:-15s; --c:#cfe0f2"></span>
+            <span style="--x:91%; --s:28px; --d:24s; --delay:-4s; --c:#ddd0f0"></span>
+            <span style="--x:0%; --s:18px; --d:16s; --delay:-24s; --c:#ddd0f0"></span>
+            <span style="--x:0%; --s:31px; --d:21s; --delay:-19s; --c:#f7d2bf"></span>
+            <span style="--x:64%; --s:41px; --d:20s; --delay:-23s; --c:#ddd0f0"></span>
+            <span style="--x:91%; --s:37px; --d:15s; --delay:-1s; --c:#cfe4d5"></span>
+            <span style="--x:93%; --s:41px; --d:26s; --delay:-20s; --c:#f6e3a1"></span>
+            <span style="--x:95%; --s:36px; --d:22s; --delay:-18s; --c:#cfe0f2"></span>
+            <span style="--x:94%; --s:15px; --d:18s; --delay:-19s; --c:#f7d2bf"></span>
+            <span style="--x:94%; --s:48px; --d:23s; --delay:-18s; --c:#f3c3cd"></span>
+            <span style="--x:92%; --s:31px; --d:18s; --delay:-3s; --c:#f3c3cd"></span>
+            <span style="--x:96%; --s:19px; --d:19s; --delay:-25s; --c:#f3c3cd"></span>
+            <span style="--x:91%; --s:15px; --d:18s; --delay:-13s; --c:#cfe0f2"></span>
+            <span style="--x:20%; --s:16px; --d:20s; --delay:-22s; --c:#ddd0f0"></span>
+        </div>
+
+        <div class="section-heading">
+
+            <span>✿ little rattles ✿</span>
+
+            <h2>Οι κουδουνίστρες μας <span class="rattle-icon">🪇</span></h2>
+
+            <p>
+                Απαλές πλεκτές κουδουνίστρες για τις πρώτες αγκαλιές και τα πρώτα παιχνίδια.
+            </p>
+
+        </div>
+
+
+<div class="rattle-grid">
+
+    <!-- LITTLE GIRAFFE -->
+    <article class="rattle-card" style="--ring:#f3c3cd; --i:0">
+
+        <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+
+        <div class="rattle-photo-wrap">
+            <div class="rattle-photo" data-emoji="🦒">
+                <img src="rattles_giraffe.jpg" alt="Little giraffe" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <h3>Little giraffe</h3>
+
+        <p>Γλυκοί ήχοι από ψηλά για τις πιο χαρούμενες ανακαλύψεις.</p>
+
+        <div class="rattle-bottom">
+            <strong>25€</strong>
+            <button class="rattle-add" onclick="addToCart('Little giraffe', 25)">
+                + Προσθήκη
+            </button>
+        </div>
+
+    </article>
+
+    <!-- LITTLE BEAR -->
+    <article class="rattle-card" style="--ring:#cfe4d5; --i:1">
+
+        <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+
+        <div class="rattle-photo-wrap">
+            <div class="rattle-photo" data-emoji="🐻">
+                <img src="rettles_bear.jpg" alt="Little bear" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <h3>Little bear</h3>
+
+        <p>Ο πιο τρυφερός ήχος για την πρώτη του παρέα.</p>
+
+        <div class="rattle-bottom">
+            <strong>25€</strong>
+            <button class="rattle-add" onclick="addToCart('Little bear', 25)">
+                + Προσθήκη
+            </button>
+        </div>
+
+    </article>
+
+    <!-- LITTLE DOG -->
+    <article class="rattle-card" style="--ring:#f6e3a1; --i:2">
+
+        <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+
+        <div class="rattle-photo-wrap">
+            <div class="rattle-photo" data-emoji="🐶">
+                <img src="rettles_dog.jpg" alt="Little dog" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <h3>Little dog</h3>
+
+        <p>Ο πιο πιστός φίλος στις πρώτες του περιπέτειες.</p>
+
+        <div class="rattle-bottom">
+            <strong>25€</strong>
+            <button class="rattle-add" onclick="addToCart('Little dog', 25)">
+                + Προσθήκη
+            </button>
+        </div>
+
+    </article>
+
+    <!-- LITTLE ELEPHANT -->
+    <article class="rattle-card" style="--ring:#cfe0f2; --i:3">
+
+        <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+
+        <div class="rattle-photo-wrap">
+            <div class="rattle-photo" data-emoji="🐘">
+                <img src="rettles_elephant.jpg" alt="Little elephant" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <h3>Little elephant</h3>
+
+        <p>Μικρό μέγεθος, τεράστια αγκαλιά!</p>
+
+        <div class="rattle-bottom">
+            <strong>25€</strong>
+            <button class="rattle-add" onclick="addToCart('Little elephant', 25)">
+                + Προσθήκη
+            </button>
+        </div>
+
+    </article>
+
+    <!-- LITTLE HARE -->
+    <article class="rattle-card" style="--ring:#ddd0f0; --i:4">
+
+        <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+
+        <div class="rattle-photo-wrap">
+            <div class="rattle-photo" data-emoji="🐰">
+                <img src="rettles_hare.jpg" alt="Little hare" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <h3>Little hare</h3>
+
+        <p>Ήρεμοι, απαλοί ήχοι σαν μικρή νιφάδα αγάπης.</p>
+
+        <div class="rattle-bottom">
+            <strong>25€</strong>
+            <button class="rattle-add" onclick="addToCart('Little hare', 25)">
+                + Προσθήκη
+            </button>
+        </div>
+
+    </article>
+
+    <!-- LITTLE OWL -->
+    <article class="rattle-card" style="--ring:#f7d2bf; --i:5">
+
+        <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+
+        <div class="rattle-photo-wrap">
+            <div class="rattle-photo" data-emoji="🦉">
+                <img src="rettles_owl.jpg" alt="Little owl" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <h3>Little owl</h3>
+
+        <p>Ένας σοφός φίλος για ήσυχες, ονειρεμένες νύχτες.</p>
+
+        <div class="rattle-bottom">
+            <strong>25€</strong>
+            <button class="rattle-add" onclick="addToCart('Little owl', 25)">
+                + Προσθήκη
+            </button>
+        </div>
+
+    </article>
+
+    <!-- LITTLE PINK HARE -->
+    <article class="rattle-card" style="--ring:#f3c3cd; --i:6">
+
+        <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+
+        <div class="rattle-photo-wrap">
+            <div class="rattle-photo" data-emoji="🐰">
+                <img src="rettles_pink_hare.jpg" alt="Little pink hare" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <h3>Little pink hare</h3>
+
+        <p>Για τις πιο παραμυθένιες στιγμές παιχνιδιού.</p>
+
+        <div class="rattle-bottom">
+            <strong>25€</strong>
+            <button class="rattle-add" onclick="addToCart('Little pink hare', 25)">
+                + Προσθήκη
+            </button>
+        </div>
+
+    </article>
+
+    <!-- LITTLE REINDEER -->
+    <article class="rattle-card" style="--ring:#cfe4d5; --i:7">
+
+        <button class="heart-buttons" onclick="toggleHeart(this)">♡</button>
+
+        <div class="rattle-photo-wrap">
+            <div class="rattle-photo" data-emoji="🦌">
+                <img src="rettles_reindeer.jpg" alt="Little reindeer" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <h3>Little reindeer</h3>
+
+        <p>Ένας μικρός γιορτινός φίλος που σκορπίζει χαμόγελα κάθε μέρα.</p>
+
+        <div class="rattle-bottom">
+            <strong>25€</strong>
+            <button class="rattle-add" onclick="addToCart('Little reindeer', 25)">
+                + Προσθήκη
+            </button>
+        </div>
+
+    </article>
+
+</div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+
+            <div class="about-circle">
+                🧶
+            </div>
+
+            <span class="about-doodle one">✿</span>
+            <span class="about-doodle two">♡</span>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="section-label">
+                ✿ a little story
+            </span>
+
+            <h2>
+                Φτιαγμένα αργά,
+                <span>με αγάπη.</span>
+            </h2>
+
+            <p>
+                Κάθε Little Loops παιχνιδάκι ξεκινάει με ένα κουβάρι
+                νήμα, ένα βελονάκι και μια μικρή ιδέα.
+            </p>
+
+            <p>
+                Δεν φτιάχνουμε απλώς παιχνίδια.
+                Φτιάχνουμε μικρούς φίλους που μπορούν να κρατήσουν
+                μια ξεχωριστή θέση στην καρδιά σου.
+            </p>
+
+            <div class="signature">
+                with love ♡
+                <br>
+                <strong>Little Loops</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CUSTOM -->
+    <section class="custom">
+
+        <div>
+
+            <span>♡ something special?</span>
+
+            <h2>
+                Θες ένα παιχνιδάκι
+                <br>
+                φτιαγμένο μόνο για σένα;
+            </h2>
+
+            <p>
+                Μπορούμε να δημιουργήσουμε ένα custom
+                πλεκτό φιλαράκι στα χρώματα και στο στυλ που αγαπάς.
+            </p>
+
+            <a href="#contact" class="primary-button">
+                Μίλησέ μας ♡
+            </a>
+
+        </div>
+
+        <div class="custom-decoration">
+            🧸
+        </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+
+        <div class="newsletter-icon">
+            ✉
+        </div>
+
+        <h2>Μείνε στην παρέα μας ♡</h2>
+
+        <p>
+            Νέα παιχνιδάκια, μικρές συλλογές και πολλή χαριτωμενιά.
+        </p>
+
+        <form onsubmit="subscribe(event)">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Το email σου..."
+                required
+            >
+
+            <button type="submit">
+                Εγγραφή
+            </button>
+
+        </form>
+
+        <small id="subscribeMessage"></small>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <div class="footer-logo">
+            🧶 <strong>Little Loops</strong>
+            <span>handmade crochet</span>
+        </div>
+
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Email</a>
+        </div>
+
+        <p>
+            © 2026 Little Loops · Made slowly. Made with love. ♡
+        </p>
+
+    </footer>
+
+
+    <!-- CART -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart(event)">
+
+        <div class="cart" onclick="event.stopPropagation()">
+
+            <button class="close-cart" onclick="closeCart()">
+                ×
+            </button>
+
+            <h2>
+                Το καλαθάκι σου 🧺
+            </h2>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-total">
+
+                <span>Σύνολο</span>
+
+                <strong id="cartTotal">
+                    0€
+                </strong>
+
+            </div>
+
+            <button class="checkout-button" onclick="checkout()">
+                Ολοκλήρωση παραγγελίας
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        Προστέθηκε στο καλαθάκι ♡
+    </div>
+
+
+    <script src="doll.js"></script>
+
+</body>
+</html>

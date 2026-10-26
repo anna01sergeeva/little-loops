@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Little Loops | Handmade Crochet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="doll.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="#" class="logo">
+            <span class="logo-icon">🧶</span>
+            <span>
+                Little Loops
+                <small>handmade crochet</small>
+            </span>
+        </a>
+
+        <nav class="nav">
+            <a href="#home">Αρχική</a>
+            <a href="#shop">Παιχνιδάκια</a>
+            <a href="#about">Η ιστορία μας</a>
+            <a href="#contact">Επικοινωνία</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒
+            <span id="cartCount">0</span>
+        </button>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                ✿ handmade with love ✿
+            </div>
+
+            <h1>
+                Μικρές αγκαλιές
+                <span>φτιαγμένες με το χέρι.</span>
+            </h1>
+
+            <p>
+                Χειροποίητα πλεκτά παιχνιδάκια,
+                φτιαγμένα με απαλά νήματα και πολλή αγάπη.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#shop" class="primary-button">
+                    Ανακάλυψε τη συλλογή
+                </a>
+
+                <a href="#about" class="secondary-button">
+                    Η ιστορία μας ♡
+                </a>
+            </div>
+
+            <div class="hero-decoration">
+                ✦　♡　✦
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div class="blob"></div>
+
+            <div class="flower flower-one">✿</div>
+            <div class="flower flower-two">♡</div>
+
+            <img src="./rattles.jpg" alt="Χειροποίητο πλεκτό αρκουδάκι">
+            <div class="image-note">
+                <span>♡</span>
+                made by hand
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="feature">
+            <div class="feature-icon">🧶</div>
+            <h3>100% χειροποίητα</h3>
+            <p>Κάθε παιχνιδάκι δημιουργείται στο χέρι.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">🌸</div>
+            <h3>Με πολλή αγάπη</h3>
+            <p>Μικρές λεπτομέρειες που κάνουν τη διαφορά.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">☁️</div>
+            <h3>Απαλά & γλυκά</h3>
+            <p>Όμορφα σχέδια για μικρές και μεγάλες αγκαλιές.</p>
+        </div>
+
+    </section>
+
+
+    <!-- SHOP -->
+    <section class="shop" id="shop">
+
+        <div class="section-heading">
+
+            <span>✿ our little friends ✿</span>
+
+            <h2>Οι μικροί μας φίλοι</h2>
+
+            <p>
+                Διάλεξε τον καινούριο σου μικρό φίλο.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+            <!-- PRODUCT 1 -->
+            <a href="littledoll.html" class="product-link">
+
+    <article class="product-card">
+
+        <div class="product-image">
+
+            <span class="badge">
+                ♡ αγαπημένο
+            </span>
+
+            <div class="placeholder">
+                🪆
+            </div>
+
+            <button
+                class="heart-button"
+                onclick="event.preventDefault(); event.stopPropagation(); toggleHeart(this)">
+                ♡
+            </button>
+
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-category">
+                AMIGURUMI
+            </span>
+
+            <h3>
+                Little doll
+            </h3>
+
+            <p>
+                Η πιο γλυκιά και όμορφη κούκλα.
+            </p>
+
+            <div class="product-bottom">
+
+                <strong>
+                    25€
+                </strong>
+
+                <button
+                    class="add-button"
+                    onclick="event.preventDefault(); event.stopPropagation(); addToCart('Little doll', 25)">
+                    + Προσθήκη
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</a>
+
+
+           <!-- PRODUCT 2 -->
+<a href="rettles.html" class="product-link">
+
+    <article class="product-card">
+
+        <div class="product-image bunny">
+            <span class="badge">new</span>
+
+            <div class="placeholder">
+                🪇
+            </div>
+
+            <button class="heart-button" onclick="event.preventDefault(); event.stopPropagation(); toggleHeart(this)">
+                ♡
+            </button>
+
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-category">AMIGURUMI</span>
+
+            <h3>Little rattles</h3>
+
+            <p>
+                μαλακές κουδουνίστρες για αγκαλιές.
+            </p>
+
+            <div class="product-bottom">
+
+                <strong>23€</strong>
+
+                <button
+                    class="add-button"
+                    onclick="event.preventDefault(); event.stopPropagation(); addToCart('Little rattles', 23)">
+                    + Προσθήκη
+                </button>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</a>
+
+             <!-- PRODUCT 3 -->
+<a href="toy.html" class="product-link">
+
+            <article class="product-card">
+
+                <div class="product-image duck">
+
+                    <div class="placeholder">
+                        🐥
+                    </div>
+
+              <button class="heart-button" onclick="event.preventDefault(); event.stopPropagation();     toggleHeart(this)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">AMIGURUMI</span>
+
+                    <h3>Little friend</h3>
+
+                    <p>
+                        Ένα μικρό χνουδωτό φιλαράκι.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>22€</strong>
+
+                        <button
+                    class="add-button"
+                    onclick="event.preventDefault(); event.stopPropagation(); addToCart('Little friend', 22)">
+                    + Προσθήκη
+                </button>
+
+
+                    </div>
+
+                </div>
+
+            </article>
+        </a>        
+
+            <!-- PRODUCT 4 -->
+            <!-- PRODUCT 4 -->
+<a href="christmas.html" class="product-link">
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <div class="placeholder">
+                       🎄
+                    </div>
+
+                    <button class="heart-button" onclick="event.preventDefault(); event.stopPropagation();     toggleHeart(this)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">MINI COLLECTION</span>
+
+                    <h3>Cristmas presents</h3>
+
+                    <p>
+                        Ο μικρός χριστουγεννίατικος φίλος.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>20€</strong>
+
+                       <button
+                    class="add-button"
+                    onclick="event.preventDefault(); event.stopPropagation(); addToCart('Christmas presents', 20)">
+                    + Προσθήκη
+                </button>
+
+
+                    </div>
+
+                </div>
+
+            </article>
+        </a>        
+
+        </div>
+
+        <a href="collection.html" class="view-all">
+            <span class="view-all-yarn">🧶</span>
+            Δες όλη τη συλλογή
+            <span class="view-all-arrow">→</span>
+        </a>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+
+            <div class="about-circle">
+                🧶
+            </div>
+
+            <span class="about-doodle one">✿</span>
+            <span class="about-doodle two">♡</span>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="section-label">
+                ✿ a little story
+            </span>
+
+            <h2>
+                Φτιαγμένα αργά,
+                <span>με αγάπη.</span>
+            </h2>
+
+            <p>
+                Κάθε Little Loops παιχνιδάκι ξεκινάει με ένα κουβάρι
+                νήμα, ένα βελονάκι και μια μικρή ιδέα.
+            </p>
+
+            <p>
+                Δεν φτιάχνουμε απλώς παιχνίδια.
+                Φτιάχνουμε μικρούς φίλους που μπορούν να κρατήσουν
+                μια ξεχωριστή θέση στην καρδιά σου.
+            </p>
+
+            <div class="signature">
+                with love ♡
+                <br>
+                <strong>Little Loops</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CUSTOM -->
+    <section class="custom">
+
+        <div>
+
+            <span>♡ something special?</span>
+
+            <h2>
+                Θες ένα παιχνιδάκι
+                <br>
+                φτιαγμένο μόνο για σένα;
+            </h2>
+
+            <p>
+                Μπορούμε να δημιουργήσουμε ένα custom
+                πλεκτό φιλαράκι στα χρώματα και στο στυλ που αγαπάς.
+            </p>
+
+            <a href="#contact" class="primary-button">
+                Μίλησέ μας ♡
+            </a>
+
+        </div>
+
+        <div class="custom-decoration">
+            🧸
+        </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+
+        <div class="newsletter-icon">
+            ✉
+        </div>
+
+        <h2>Μείνε στην παρέα μας ♡</h2>
+
+        <p>
+            Νέα παιχνιδάκια, μικρές συλλογές και πολλή χαριτωμενιά.
+        </p>
+
+        <form onsubmit="subscribe(event)">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Το email σου..."
+                required
+            >
+
+            <button type="submit">
+                Εγγραφή
+            </button>
+
+        </form>
+
+        <small id="subscribeMessage"></small>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <div class="footer-logo">
+            🧶 <strong>Little Loops</strong>
+            <span>handmade crochet</span>
+        </div>
+
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Email</a>
+        </div>
+
+        <p>
+            © 2026 Little Loops · Made slowly. Made with love. ♡
+        </p>
+
+    </footer>
+
+
+    <!-- CART -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart(event)">
+
+        <div class="cart" onclick="event.stopPropagation()">
+
+            <button class="close-cart" onclick="closeCart()">
+                ×
+            </button>
+
+            <h2>
+                Το καλαθάκι σου 🧺
+            </h2>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-total">
+
+                <span>Σύνολο</span>
+
+                <strong id="cartTotal">
+                    0€
+                </strong>
+
+            </div>
+
+            <button class="checkout-button" onclick="checkout()">
+                Ολοκλήρωση παραγγελίας
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        Προστέθηκε στο καλαθάκι ♡
+    </div>
+
+
+    <script src="doll.js"></script>
+
+</body>
+</html>
